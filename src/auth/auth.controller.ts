@@ -8,12 +8,13 @@ export class AuthController {
     // end points for signup and signin
     @Post('signup')  // because of the global, route= /auth/signup
     signup() {
-        return {msg: 'i am signup'}
+        return this.AuthService.signup();
     }
      
     @Post('signin')
     signin() {
-        return {msg: 'i am signin'}
+        return this.AuthService.signin();
     }
 }
+     
 
